@@ -2,7 +2,7 @@ import json
 from openai import OpenAI
 
 # secret.json 파일에서 API키 로드
-with open('secret.json') as f:
+with open('./secret.json') as f:
     secrets = json.load(f)
 
 client = OpenAI(
@@ -13,8 +13,11 @@ chat_completion = client.chat.completions.create(
     messages=[
         {
             "role": "user",
-            "content": "Say this is a test",
+            "content": "What is your role",
         }
     ],
-    model="gpt-3.5-turbo",
+    model="gpt-4",
 )
+
+# 모델의 응답 출력
+print(chat_completion.choices[0].message.content)
