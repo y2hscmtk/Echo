@@ -1,15 +1,15 @@
-from llm import ask # gpt.py에서 ask 함수 import
+from llm import ask
 import time
 import os
 import speech_recognition as sr
 from gtts import gTTS
 from playsound import playsound
 
-# 음성 인식(STT)
+# STT
 def stt(recognizer, audio):  
     try:
         text = recognizer.recognize_google(audio, language='ko')
-        print("[사용자] " + text)
+        print("[USER] " + text)
         tts(text)
     except sr.UnknownValueError:
         print("인식 실패")
@@ -22,7 +22,7 @@ def tts(user_input):
     answer_text = ask(user_input)
     speak(answer_text) # 말하기
 
-# 말하기 (TTS)
+# TTS
 def speak(text):  
     print('[에코] ' + text)
     file_name = 'voice.mp3'
