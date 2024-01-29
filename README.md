@@ -23,7 +23,7 @@ pip install openai
 ## Usage
 
 > [!IMPORTANT]
-> Before starting the program, you must create a Secret.json file and input your OpenAI ChatGPT API Key.
+> Before starting the program, you must create a secret.json file and input your OpenAI ChatGPT API Key.
 ```
 {
     "OPENAI_API_KEY" = "YOUR_API_KEY"
