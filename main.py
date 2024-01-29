@@ -1,4 +1,4 @@
-from gpt import ask # gpt.py에서 ask 함수 import
+from llm import ask # gpt.py에서 ask 함수 import
 import time
 import os
 import speech_recognition as sr
