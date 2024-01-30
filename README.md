@@ -1,4 +1,5 @@
 # Echo
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fy2hscmtk%2FEcho&count_bg=%2300D5FF&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 Echo is a program created, inspired by Ms. Jinah Roh's work 'Incomplete Model'.
 
