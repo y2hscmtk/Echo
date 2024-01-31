@@ -27,7 +27,7 @@ pip install openai
 > Before starting the program, you must create a secret.json file and input your OpenAI ChatGPT API Key.
 ```
 {
-    "OPENAI_API_KEY" = "YOUR_API_KEY"
+    "OPENAI_API_KEY" : "YOUR_API_KEY"
 }
 ```
-You can run the program by executing main.py.
+You can run the program by executing main.py. Upon starting the program, you will be prompted to choose a language. Please select between 'kr' for Korean and 'eng' for English
