@@ -9,7 +9,7 @@ from playsound import playsound
 def stt(recognizer, audio):
     try:
         # Set the language based on the user's choice
-        text = recognizer.recognize_google(audio, language=lang)
+        text = recognizer.recognize_google(audio, language=language_code)
         print("[USER] " + text)
         ai_speak(text)
     except sr.UnknownValueError:
@@ -27,7 +27,7 @@ def ai_speak(user_input):
 def speak(text):
     print('[Echo] ' + text)
     file_name = 'voice.mp3'
-    tts = gTTS(text=text, lang=lang)
+    tts = gTTS(text=text, lang=language_code)
     tts.save(file_name)
     playsound(file_name)
     # Remove 'voice.mp3' file after execution
@@ -40,6 +40,7 @@ m = sr.Microphone()
 # Ask the user to choose a language
 while True:
     lang = input("Choose your language (kr/eng): ")
+    language_code = 'ko' if lang == 'kr' else 'en-US'
     if lang.lower() in ['kr', 'eng']:
         break
     else:
